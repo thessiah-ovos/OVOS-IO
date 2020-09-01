@@ -27,15 +27,14 @@
     "heroku-cli": "^7.0.9",
     "howler": "^2.2.0",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.10.0"
-  },
-  "devDependencies": {
+    "mongoose": "^5.10.0",
     "@babel/cli": "^7.10.5",
     "@babel/core": "^7.11.1",
     "@babel/node": "^7.10.5",
     "@babel/preset-env": "^7.11.0",
     "nodemon": "^2.0.4"
   },
+  
   "engines": {
     "node": "10.17.0",
     "npm": "6.11.3"
