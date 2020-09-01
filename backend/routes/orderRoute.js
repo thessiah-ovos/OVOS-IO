@@ -32,20 +32,20 @@ router.delete("/:id", isAuth, isAdmin, async (req, res) => {
     res.status(404).send("Order Not Found.")
   }
 });
-
-router.post("/", iaAuth, async (req, res) => {
+``
+router.post("/", isAuth, async (req, res) => {
   const newOrder = new Order({
     orderItems: req.body.orderItems,
     user: req.user._id,
-    billing: req.body.billing,
     payment: req.body.payment,
-   // itemsPrice: req.body.itemsPrice,
+    itemsPrice: req.body.itemsPrice,
+    lease: req.body.lease,
     taxPrice: req.body.taxPrice,
     billingPrice: req.body.billingPrice,
     totalPrice: req.body.totalPrice,
   });
   const newOrderCreated = await newOrder.save();
-  res.status(201).send({ message: "New Order Created", data: newOrderCreated });
+   res.status(201).send({ message: "New Order Created", data: newOrderCreated });
 });
 
 router.put("/:id/pay", isAuth, async (req, res) => {

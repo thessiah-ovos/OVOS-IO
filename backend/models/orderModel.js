@@ -12,7 +12,8 @@ const paymentSchema = {
 
 const orderItemSchema = new mongoose.Schema({
   name: { type: String, required: true },
-  lease: { type: String, required: true },
+ // qty: { type: Number, required: true },
+  lease: { type: String, required: true},
   image: { type: String, required: true },
   price: { type: Number, required: true },
   product: {
@@ -25,9 +26,9 @@ const orderItemSchema = new mongoose.Schema({
 const orderSchema = new mongoose.Schema({
   user: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
   orderItems: [orderItemSchema],
-  billing: billingSchema,
   payment: paymentSchema,
   itemsPrice: { type: Number },
+  lease: { type: String },
   taxPrice: { type: Number },
   billingPrice: { type: Number },
   totalPrice: { type: Number },

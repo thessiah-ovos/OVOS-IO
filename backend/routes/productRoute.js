@@ -48,6 +48,7 @@ router.put('/:id', isAuth, isAdmin, async (req, res) => {
     product.image = req.body.image;
     product.artist = req.body.artist;
     product.category = req.body.category;
+    product.audio = req.body.audio;
     const updatedProduct = await product.save();
     if (updatedProduct) {
       return res
@@ -75,6 +76,7 @@ router.post('/', isAuth, isAdmin, async (req, res) => {
     image: req.body.image,
     artist: req.body.artist,
     category: req.body.category,
+    audio: req.body.audio,
   });
   const newProduct = await product.save();
   if (newProduct) {

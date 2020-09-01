@@ -16,6 +16,7 @@ const productSchema = new mongoose.Schema({
   artist: { type: String, required: true },
   price: { type: Number, default: 0, required: true },
   category: { type: String, required: true },
+  audio: { type: String, required: true },
 });
 
 const productModel = mongoose.model('Product', productSchema);

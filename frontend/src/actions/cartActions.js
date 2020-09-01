@@ -16,7 +16,7 @@ const addToCart = (beatId, lease) => async (dispatch, getState) =>{
         }
     });
 
-    const {cart:{cartItems}} = getState();
+    const { cart: { cartItems } } = getState();
     Cookie.set("cartItems", JSON.stringify(cartItems));
     } catch (error) {
         
