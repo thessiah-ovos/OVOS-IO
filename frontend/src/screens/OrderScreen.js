@@ -31,16 +31,7 @@ function OrderScreen(props) {
       <div className="placeorder">
         <div className="placeorder-info">
           <div>
-            <h3>
-              Billing
-          </h3>
-            <div>
-              {order.billing.address}, {order.billing.city},
-          {order.billing.postalCode}, {order.billing.country},
-          </div>
-            <div>
-              {order.isDelivered ? "Delivered at " + order.deliveredAt : "Not Delivered."}
-            </div>
+            <h4>COMPLETE YOUR ORDER</h4>
           </div>
           <div>
             <h3>Payment</h3>
@@ -48,7 +39,7 @@ function OrderScreen(props) {
               Payment Method: {order.payment.paymentMethod}
             </div>
             <div>
-              {order.isPaid ? "Paid at " + order.paidAt : "Not Paid."}
+             Status: {order.isPaid ? "Paid at " + order.paidAt : "Not Paid."}
             </div>
           </div>
           <div>
@@ -80,7 +71,7 @@ function OrderScreen(props) {
 
                         </div>
                         <div>
-                          Qty: {item.qty}
+                          Lease: {item.lease}
                         </div>
                       </div>
                       <div className="cart-price">
@@ -100,7 +91,7 @@ function OrderScreen(props) {
               {loadingPay && <div>Finishing Payment...</div>}
               {!order.isPaid &&
                 <PaypalButton
-                  amount={order.totalPrice}
+                  amount={order.taxPrice}
                   onSuccess={handleSuccessPayment} />
               }
             </li>
@@ -110,14 +101,6 @@ function OrderScreen(props) {
             <li>
               <div>Items</div>
               <div>${order.itemsPrice}</div>
-            </li>
-            <li>
-              <div>Shipping</div>
-              <div>${order.billingPrice}</div>
-            </li>
-            <li>
-              <div>Tax</div>
-              <div>${order.taxPrice}</div>
             </li>
             <li>
               <div>Order Total</div>

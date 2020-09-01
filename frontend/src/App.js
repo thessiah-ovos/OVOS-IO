@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter, Route, Link } from 'react-router-dom';
-import Home from './screens/Home';
+import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
 import BeatStore from './screens/BeatStore';
 import CartScreen from './screens/CartScreen';
 import { useSelector } from 'react-redux';
@@ -14,6 +13,9 @@ import ProductsScreen from './screens/ProductsScreen';
 import OrderScreen from './screens/OrderScreen';
 import ProfileScreen from './screens/ProfileScreen';
 import OrdersScreen from './screens/OrdersScreen';
+import Home from './screens/Home';
+import AudioPlayer from './AudioPlayer';
+import Welcome from './screens/Welcome';
 
 function App() {
 
@@ -29,7 +31,7 @@ function App() {
 
   return (
     <BrowserRouter>
-    <div className="grid-container">
+   <div className="grid-container">
     <header className="header">
       <div className="brand">
         <button onClick={openMenu}>
@@ -38,9 +40,9 @@ function App() {
         <Link to="/" >ThessianSound</Link>
       </div>
       <div className="header-links">
-        <a href="cart.html">Cart</a>
+        <Link to="/cart">Cart</Link>
         {
-          userInfo ? <Link to="/user-library">{userInfo.name}</Link>:
+          userInfo ? <Link to="/profile">{userInfo.name}</Link>:
           <Link to="/signin">Sign In</Link>
         }
       </div>
@@ -61,10 +63,12 @@ function App() {
     </aside>
     <main className="main">
       <div className="content">
+        <Switch>
         <Route path="/signin" component={SigninScreen} />
         <Route path="/orders" component={OrdersScreen} />
         <Route path="/profile" component={ProfileScreen} />
         <Route path="/register" component={RegisterScreen} />
+        <Route path="/audioplayer" component={AudioPlayer} />
         <Route path="/billing" component={BillingScreen} />
         <Route path="/products" component={ProductsScreen} />
         <Route path="/order/:id" component={OrderScreen} />
@@ -73,15 +77,15 @@ function App() {
         <Route path="/product/:id" component={BeatStore} />
         <Route exact path="/" component={Home} />
         <Route path="/cart/:id?" component={CartScreen} />
-      </div>
-
-    </main>
+      </Switch>
+        </div>
+        </main>
     <footer className="footer">
       All right reserved.
     </footer>
   </div>
   </BrowserRouter>
-  );
+  ); 
 }
 
 export default App;

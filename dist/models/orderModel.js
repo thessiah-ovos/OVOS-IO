@@ -9,24 +9,7 @@ var _mongoose = _interopRequireDefault(require("mongoose"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-var billingSchema = {
-  address: {
-    type: String,
-    required: true
-  },
-  city: {
-    type: String,
-    required: true
-  },
-  postalCode: {
-    type: String,
-    required: true
-  },
-  country: {
-    type: String,
-    required: true
-  }
-};
+
 var paymentSchema = {
   paymentMethod: {
     type: String,
@@ -42,6 +25,7 @@ var orderItemSchema = new _mongoose["default"].Schema({
     type: String,
     required: true
   },
+  // qty: { type: Number, required: true },
   image: {
     type: String,
     required: true
@@ -63,10 +47,12 @@ var orderSchema = new _mongoose["default"].Schema({
     required: true
   },
   orderItems: [orderItemSchema],
-  billing: billingSchema,
   payment: paymentSchema,
   itemsPrice: {
     type: Number
+  },
+  lease: {
+    type: String
   },
   taxPrice: {
     type: Number

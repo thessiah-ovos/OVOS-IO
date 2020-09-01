@@ -15,7 +15,7 @@ function PaymentScreen(props) {
   };
   return (
     <div>
-      <CheckoutSteps step1 step2 step3></CheckoutSteps>
+      <CheckoutSteps step1 step2 ></CheckoutSteps>
       <div className="form">
         <form onSubmit={submitHandler}>
           <ul className="form-container">
@@ -32,7 +32,7 @@ function PaymentScreen(props) {
                   value="paypal"
                   onChange={(e) => setPaymentMethod(e.target.value)}
                 ></input>
-                <label for="paymentMethod">Paypal</label>
+                <label htmlFor="paymentMethod">Paypal</label>
               </div>
             </li>
 

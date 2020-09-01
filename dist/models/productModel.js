@@ -46,6 +46,10 @@ var productSchema = new _mongoose["default"].Schema({
   category: {
     type: String,
     required: true
+  },
+  audio: {
+    type: String,
+    required: true
   }
 });
 

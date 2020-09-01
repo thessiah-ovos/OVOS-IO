@@ -150,7 +150,8 @@ router["delete"]("/:id", _util.isAuth, _util.isAdmin, /*#__PURE__*/function () {
     return _ref4.apply(this, arguments);
   };
 }());
-router.post("/", iaAuth, /*#__PURE__*/function () {
+"";
+router.post("/", _util.isAuth, /*#__PURE__*/function () {
   var _ref5 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee5(req, res) {
     var newOrder, newOrderCreated;
     return regeneratorRuntime.wrap(function _callee5$(_context5) {
@@ -160,9 +161,9 @@ router.post("/", iaAuth, /*#__PURE__*/function () {
             newOrder = new _orderModel["default"]({
               orderItems: req.body.orderItems,
               user: req.user._id,
-              billing: req.body.billing,
               payment: req.body.payment,
-              // itemsPrice: req.body.itemsPrice,
+              itemsPrice: req.body.itemsPrice,
+              lease: req.body.lease,
               taxPrice: req.body.taxPrice,
               billingPrice: req.body.billingPrice,
               totalPrice: req.body.totalPrice

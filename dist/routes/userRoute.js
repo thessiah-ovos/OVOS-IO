@@ -159,7 +159,7 @@ router.post('/register', /*#__PURE__*/function () {
     return _ref3.apply(this, arguments);
   };
 }());
-router.get("/api/users/createadmin", /*#__PURE__*/function () {
+router.get("/createadmin", /*#__PURE__*/function () {
   var _ref4 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee4(req, res) {
     var user, newUser;
     return regeneratorRuntime.wrap(function _callee4$(_context4) {
@@ -168,9 +168,9 @@ router.get("/api/users/createadmin", /*#__PURE__*/function () {
           case 0:
             _context4.prev = 0;
             user = new _userModel["default"]({
-              name: 'Richell',
-              email: 'richell.bonfield12@gmail.com',
-              password: '1234',
+              name: 'Richelle',
+              email: 'richell@gmail.com',
+              password: '12345A',
               isAdmin: true
             });
             _context4.next = 4;

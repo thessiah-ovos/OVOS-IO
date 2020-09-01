@@ -25,7 +25,6 @@ function OrdersScreen(props) {
   }
   return loading ? <div>Loading...</div> :
     <div className="content content-margined">
-
       <div className="order-header">
         <h3>Orders</h3>
       </div>

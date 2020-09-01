@@ -125,6 +125,7 @@ router.put('/:id', _util.isAuth, _util.isAdmin, /*#__PURE__*/function () {
             product.image = req.body.image;
             product.artist = req.body.artist;
             product.category = req.body.category;
+            product.audio = req.body.audio;
             _context3.next = 12;
             return product.save();
 
@@ -213,7 +214,8 @@ router.post('/', _util.isAuth, _util.isAdmin, /*#__PURE__*/function () {
               price: req.body.price,
               image: req.body.image,
               artist: req.body.artist,
-              category: req.body.category
+              category: req.body.category,
+              audio: req.body.audio
             });
             _context5.next = 3;
             return product.save();

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { logout, update } from '../actions/userActions';
 import { listMyOrders } from '../actions/orderActions';
 import { useDispatch, useSelector } from 'react-redux';
+import imgTest from '../rotator/green-foreground.svg';
 
 function ProfileScreen(props) {
   const [name, setName] = useState('');
@@ -12,19 +13,23 @@ function ProfileScreen(props) {
 
   const userSignin = useSelector(state => state.userSignin);
   const { userInfo } = userSignin;
+
   const handleLogout = () => {
     dispatch(logout());
     props.history.push("/signin");
   }
+
   const submitHandler = (e) => {
     e.preventDefault();
     dispatch(update({ userId: userInfo._id, email, name, password }))
   }
+
   const userUpdate = useSelector(state => state.userUpdate);
   const { loading, success, error } = userUpdate;
 
   const myOrderList = useSelector(state => state.myOrderList);
   const { loading: loadingOrders, orders, error: errorOrders } = myOrderList;
+  
   useEffect(() => {
     if (userInfo) {
       console.log(userInfo.name)
@@ -37,6 +42,20 @@ function ProfileScreen(props) {
 
     };
   }, [userInfo])
+
+  const downloader = (order) => {
+    return (
+        <div>
+            <div class="imgs">
+                <a href={order.orderItems[0].image} download>
+                    <button type="button" class="btn btn-indigo btn-lg">Download </button>
+                </a>
+            </div>
+        </div>
+    )
+}
+
+  console.log(orders)
 
   return <div className="profile">
     <div className="profile-info">
@@ -93,6 +112,7 @@ function ProfileScreen(props) {
                   <th>DATE</th>
                   <th>TOTAL</th>
                   <th>PAID</th>
+                  <th>LEASE</th>
                   <th>ACTIONS</th>
                 </tr>
               </thead>
@@ -102,6 +122,7 @@ function ProfileScreen(props) {
                   <td>{order.createdAt}</td>
                   <td>{order.totalPrice}</td>
                   <td>{order.isPaid}</td>
+                  <td>{order.orderItems[0].lease}</td>
                   <td>
                     <Link to={"/order/" + order._id}>DETAILS</Link>
                   </td>
@@ -109,6 +130,33 @@ function ProfileScreen(props) {
               </tbody>
             </table>
       }
+      <div>
+        <h2>Download Files</h2>
+      </div>
+      <div>
+      {
+        loadingOrders ? <div>Loading...</div> :
+          errorOrders ? <div>{errorOrders} </div> :
+            <table className="table2">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>LEASE</th>
+                  <th>DOWNLOAD</th>
+                </tr>
+              </thead>
+              <tbody>
+                {orders.map(order => <tr key={order._id}>
+                  <td>{order._id}</td>
+                  <td>{order.orderItems[0].lease}</td>
+                  <td>
+                    {order.orderItems[0].lease === 'Copyright' ? downloader(order) : 1}
+                  </td>
+                </tr>)}
+              </tbody>
+            </table>
+      }
+      </div>
     </div>
   </div>
 }

@@ -9,22 +9,22 @@ function PlaceOrderScreen(props) {
   const orderCreate = useSelector(state => state.orderCreate);
   const { loading, success, error, order } = orderCreate;
 
-  const { cartItems, billing, payment } = cart;
-  if (!billing.address) {
-    props.history.push("/billing");
-  } else if (!payment.paymentMethod) {
+  const { cartItems, payment } = cart;
+  if (!payment.paymentMethod) {
     props.history.push("/payment");
   }
-  const itemsPrice = cartItems.reduce((a, c) => a + c.price * c.qty, 0);
+  const itemsPrice = cartItems.reduce((a, c) => a + c.price * 1, 0);
   const billingPrice = itemsPrice > 100 ? 0 : 10;
+  const taxPrice = 0;
   const totalPrice = itemsPrice + billingPrice + taxPrice;
+ 
   const dispatch = useDispatch();
 
   const placeOrderHandler = () => {
     // create an order
     
     dispatch(createOrder({
-      orderItems: cartItems, billing, payment, billingPrice,
+      orderItems: cartItems, payment, itemsPrice, billingPrice, 
       taxPrice, totalPrice
     }));
   }
@@ -36,18 +36,9 @@ function PlaceOrderScreen(props) {
   }, [success]);
 
   return <div>
-    <CheckoutSteps step1 step2 step3 step4 ></CheckoutSteps>
+    <CheckoutSteps step1 step2 step3 ></CheckoutSteps>
     <div className="placeorder">
       <div className="placeorder-info">
-        <div>
-          <h3>
-            billing
-          </h3>
-          <div>
-            {cart.billing.address}, {cart.billing.city},
-          {cart.billing.postalCode}, {cart.billing.country},
-          </div>
-        </div>
         <div>
           <h3>Payment</h3>
           <div>
@@ -83,7 +74,7 @@ function PlaceOrderScreen(props) {
 
                       </div>
                       <div>
-                        Qty: {item.qty}
+                        Lease: {item.lease}
                       </div>
                     </div>
                     <div className="cart-price">
@@ -106,10 +97,9 @@ function PlaceOrderScreen(props) {
             <h3>Order Summary</h3>
           </li>
           <li>
-            <div>Items</div>
-             {totalPrice}
+            <div>Total Cost</div>
+             ${totalPrice}
           </li>
-          
         </ul>
 
 

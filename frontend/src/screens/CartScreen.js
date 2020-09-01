@@ -9,20 +9,24 @@ function CartScreen(props) {
   const { cartItems } = cart;
 
 
-  const productId = props.match.params.id;
-  const qty = props.location.search ? Number(props.location.search.split("=")[1]) : 1;
+  const beatId = props.match.params.id;
+  const lease = props.location.search ? props.location.search.split("=")[1] : 2;
+//  const qty = props.location.search ? Number(props.location.search.split("=")[1]) : 1;
   const dispatch = useDispatch();
-  const removeFromCartHandler = (productId) => {
-    dispatch(removeFromCart(productId));
+
+  console.log(lease);
+
+  const removeFromCartHandler = (beatId) => {
+    dispatch(removeFromCart(beatId));
   }
   useEffect(() => {
-    if (productId) {
-      dispatch(addToCart(productId, qty));
+    if (beatId) {
+      dispatch(addToCart(beatId, lease));
     }
   }, []);
 
   const checkoutHandler = () => {
-    props.history.push("/signin?redirect=billing");
+    props.history.push("/signin?redirect=payment");
   }
 
   return <div className="cart">
@@ -55,10 +59,7 @@ function CartScreen(props) {
 
                   </div>
                   <div>
-                    Qty:
-                  <select value={item.qty} onChange={(e) => dispatch(addToCart(item.product, e.target.value))}>
-                      <option>1</option>
-                    </select>
+                    Lease: {item.lease}
                     <button type="button" className="button" onClick={() => removeFromCartHandler(item.product)} >
                       Delete
                     </button>
@@ -75,13 +76,9 @@ function CartScreen(props) {
     </div>
     <div className="cart-action">
       <h3>
-        Subtotal ( {cartItems.reduce((a, c) => a + c.qty, 0)} items)
-        :
-         { cartItems.map( item =>
-            <div> 
-             {item.price} 
-            </div>
-            )}
+        Subtotal: ${cartItems.reduce((a, c) => a + c.price, 0)}
+        
+         
       </h3>
       <button onClick={checkoutHandler} className="button primary full-width" disabled={cartItems.length === 0}>
         Proceed to Checkout
