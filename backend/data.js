@@ -4,11 +4,10 @@ export default {
       _id: '122008299872341220082901',
     name: 'Davu',
     category: 'R&B',
-    image: '/coverarts/Davu_Instrumental.jpg',
+    image: '/images/bartender.jpeg',
     price: 20,
-    tagged: '/beataudios/davu_tagged_mp3.mp3',
-    untagged: '/beataudios/davu_untagged_mp3.mp3',
-    file: '/coverArt/davuInstrumental.jpg'
+    artist: ' Thessiah',
+    audio: '/beatclips/davu_tagged_mp3.mp3'
     },
 
     {
@@ -18,7 +17,7 @@ export default {
       image: '/images/valhalla1.jpeg',
       price: 110,
       artist: ' Thessiah',
-      audio: '/beataudios/1.mp3'
+      audio: '/beatclips/jewry_tagged_mp3.mp3'
     },
     {
       _id: '122008299872341220082903',
@@ -27,7 +26,7 @@ export default {
       image: '/images/like-that.jpeg',
       price: 150,
       artist: ' Tayte',
-      audio: '/beataudios/1.mp3'
+      audio: '/beatclips/pages_tagged_mp3.mp3'
     },
   ]
 }

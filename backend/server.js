@@ -5,6 +5,7 @@ import mongoose from 'mongoose';
 import userRoute from './routes/userRoute';
 import bodyParser from 'body-parser';
 import orderRoute from './routes/orderRoute';
+import path from 'path';
 import productRoute from './routes/productRoute';
 
 const mongodbUrl = config.MONGODB_URL;
@@ -39,8 +40,6 @@ app.get("/api/products", (req, res) => {
     res.send(data.products);
 }); 
 
-
-app.use('/uploads', express.static(path.join(__dirname, '/../uploads')));
 app.use(express.static(path.join(__dirname, '/../frontend/build')));
 app.get('*', (req, res) => {
   res.sendFile(path.join(`${__dirname}/../frontend/build/index.html`));
