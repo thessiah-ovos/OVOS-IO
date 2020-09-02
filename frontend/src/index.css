@@ -6,8 +6,8 @@ body{
   font: 1.6rem Helvetica;
   height: 100vh;
   margin: 0;
-  background-color: #f8f6fc; 
-
+ /* background-color: #f8f6fc; */
+  background-image: url("./background-for-site.jpg")
 }
 
 button{
