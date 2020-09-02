@@ -2,40 +2,15 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { detailsBeat } from '../actions/beatActions';
-import bTest from '../beataudios/davu_tagged_mp3.mp3';
-import testB from '../beataudios/1.mp3';
 import {Howl, Howler} from "howler";
 
 function BeatStore(props) {
-
       
    // const [qty, setQty] = useState(1);
    const [lease, setLease] = useState(1);
    const beatDetails = useSelector((state) => state.beatDetails);
    const {  product, loading, error } = beatDetails;
    const dispatch = useDispatch();
-
-    const beatClips = [
-        {sound: bTest, label: 'Bartender'},
-        {sound: testB, label: 'Crawl'}
-      ]
-    
-      const SoundPlay = (src) => {
-        const sound = new Howl({
-          src
-        })
-        sound.play();
-      }
-    
-      const RenderSound = () => {
-        return beatClips.map((soundObj, index) => {
-          return(
-            <button key={index} onClick={() => SoundPlay(soundObj.sound)}>
-                {soundObj.label}
-            </button>
-          )
-        })
-      }
   
     useEffect(() => {
         dispatch(detailsBeat(props.match.params.id));
@@ -77,7 +52,6 @@ function BeatStore(props) {
                     </li>
                     <li>
                        Audio Test: {/*product.audio*/}
-                       {RenderSound()}
                     </li>
                 </ul>
              </div> 
@@ -90,13 +64,13 @@ function BeatStore(props) {
                         <li>
                         <li>
                         Lease: <select value={lease} onChange={(e) => { setLease(e.target.value)}}>
-                        <option>Non-Exclusive-Basic</option>
-                      <option>Non-Exclusive-Premium</option>
-                      <option>Non-Exclusive-Standard</option>
-                      <option>Non-Exclusive-Pro</option>
-                      <option>Exclusive-Pro-Unlimited</option>
-                      <option>Copyright</option>
-                      </select>
+                            <option>Non-Exclusive-Basic</option>
+                            <option>Non-Exclusive-Premium</option>
+                            <option>Non-Exclusive-Standard</option>
+                            <option>Non-Exclusive-Pro</option>
+                            <option>Exclusive-Pro-Unlimited</option>
+                            <option>Copyright</option>
+                        </select>
                         </li>
                       {/*  Qty: <select value={qty} onChange={(e) => { setQty(e.target.value)}}>
                             <option>1</option>

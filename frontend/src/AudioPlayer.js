@@ -1,11 +1,11 @@
 import React from 'react';
-import Header from './components/graphics/Header'
-import Graphics from './components/graphics/Graphics'
-import Playlist from './components/playlist/Playlist'
-import Actions from './components/playlist/Actions'
+import Header from './components/graphicsdir/Header'
+import Graphics from './components/graphicsdir/Graphics'
+import Playlist from './components/playlistdir/Playlist'
+import Actions from './components/playlistdir/Actions'
 import Controls from './components/Controls'
 
-import PlayerState from './context/PlayerState'
+import PlayerState from './contexts/PlayerState'
 
 
 import './main.css'

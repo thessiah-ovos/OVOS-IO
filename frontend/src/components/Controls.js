@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef, useContext } from 'react'
-import playerContext from '../context/playerContext'
+import playerContext from '../contexts/playerContext'
 
 function Controls() {
 
