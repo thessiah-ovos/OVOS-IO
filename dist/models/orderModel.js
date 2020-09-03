@@ -33,6 +33,12 @@ const paymentSchema = {
     required: true
   }
 };
+const agreementSchema = {
+  agreementStatus: {
+    type: String,
+    required: true
+  }
+};
 const orderItemSchema = new _mongoose.default.Schema({
   name: {
     type: String,
@@ -65,6 +71,7 @@ const orderSchema = new _mongoose.default.Schema({
   },
   orderItems: [orderItemSchema],
   payment: paymentSchema,
+  agreement: agreementSchema,
   itemsPrice: {
     type: Number
   },

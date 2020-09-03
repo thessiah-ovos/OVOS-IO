@@ -10,6 +10,10 @@ const paymentSchema = {
   paymentMethod: { type: String, required: true }
 };
 
+const agreementSchema = {
+  agreementStatus: { type: String, required: true }
+}
+
 const orderItemSchema = new mongoose.Schema({
   name: { type: String, required: true },
  // qty: { type: Number, required: true },
@@ -27,6 +31,7 @@ const orderSchema = new mongoose.Schema({
   user: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
   orderItems: [orderItemSchema],
   payment: paymentSchema,
+  agreement: agreementSchema,
   itemsPrice: { type: Number },
   lease: { type: String },
   taxPrice: { type: Number },

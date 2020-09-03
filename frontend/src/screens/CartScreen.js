@@ -26,7 +26,7 @@ function CartScreen(props) {
   }, []);
 
   const checkoutHandler = () => {
-    props.history.push("/signin?redirect=payment");
+    props.history.push("/signin?redirect=terms");
   }
 
   return <div className="cart">

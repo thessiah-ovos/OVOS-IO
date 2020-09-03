@@ -7,7 +7,6 @@ body{
   height: 100vh;
   margin: 0;
  /* background-color: #f8f6fc; */
-  background-image: url("./background-for-site.jpg")
 }
 
 button{
@@ -58,6 +57,8 @@ button{
 }
 .main{
   grid-area: main;
+ /* background-image: url("./background-for-site.jpg") */
+
 }
 .footer{
   grid-area: footer;

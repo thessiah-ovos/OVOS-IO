@@ -1,4 +1,4 @@
-import { CART_ADD_ITEM, CART_REMOVE_ITEM, CART_SAVE_BILLING, CART_SAVE_PAYMENT } from "../constants/cartConstants";
+import { CART_ADD_ITEM, CART_REMOVE_ITEM, CART_SAVE_AGREEMENT, CART_SAVE_PAYMENT } from "../constants/cartConstants";
 import Cookie from 'js-cookie';
 
 const { default: Axios } = require("axios")
@@ -31,12 +31,12 @@ const removeFromCart = (beatId) => (dispatch, getState) => {
     
 }
 
-const saveBilling = (data) => (dispatch) => {
-    dispatch({ type: CART_SAVE_BILLING, payload: data });
+const saveAgreement = (data) => (dispatch) => {
+    dispatch({ type: CART_SAVE_AGREEMENT, payload: data });
   }
   
   const savePayment = (data) => (dispatch) => {
     dispatch({ type: CART_SAVE_PAYMENT, payload: data });
   }
 
-export { addToCart, removeFromCart, saveBilling, savePayment }
+export { addToCart, removeFromCart, saveAgreement, savePayment }

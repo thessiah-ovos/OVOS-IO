@@ -15,7 +15,7 @@ function PaymentScreen(props) {
   };
   return (
     <div>
-      <CheckoutSteps step1 step2 ></CheckoutSteps>
+      <CheckoutSteps step1 step2 step3></CheckoutSteps>
       <div className="form">
         <form onSubmit={submitHandler}>
           <ul className="form-container">
@@ -47,4 +47,5 @@ function PaymentScreen(props) {
     </div>
   );
 }
+
 export default PaymentScreen;

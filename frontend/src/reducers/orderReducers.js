@@ -23,6 +23,7 @@ function orderCreateReducer(state = {}, action) {
 function orderDetailsReducer(state = {
   order: {
     orderItems: [],
+    agreement: {},
     payment: {}
   }
 }, action) {
@@ -69,6 +70,7 @@ function orderListReducer(state = {
 function orderPayReducer(state = {
   order: {
     orderItems: [],
+    agreement: {},
     payment: {}
   }
 }, action) {
@@ -86,6 +88,7 @@ function orderPayReducer(state = {
 function orderDeleteReducer(state = {
   order: {
     orderItems: [],
+    agreement: {},
     payment: {}
   }
 }, action) {

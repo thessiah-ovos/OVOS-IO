@@ -149,7 +149,106 @@ function ProfileScreen(props) {
                   <td>{order._id}</td>
                   <td>{order.orderItems[0].lease}</td>
                   <td>
-                    {order.orderItems[0].lease === 'Copyright' ? downloader(order) : 1}
+                    {order.orderItems[0].lease === 'Non-Exclusive-Basic' && order.orderItems[0].name === "Davu" ? 
+                    <a href="https://drive.google.com/drive/folders/1-hwhiDfJce7zwl9oK-qEXqRxJaVzzONM?usp=sharing">Davu NX Basic Files</a> : 
+                    
+                    order.orderItems[0].lease === 'Non-Exclusive-Standard' && order.orderItems[0].name === "Davu" ? 
+                    <a href="https://drive.google.com/drive/folders/1iqfdrRHVNUfg0MGEk6Ibf9JHtnss2HIJ?usp=sharing">Davu NX Standard Files</a> : 
+                    
+                    order.orderItems[0].lease === 'Non-Exclusive-Premium' && order.orderItems[0].name === "Davu" ? 
+                    <a href="https://drive.google.com/drive/folders/1rmazWDmEaFrMQ0dSQNM0ewxDWk2CdXX9?usp=sharing">Davu NX Premium Files</a> : 
+
+                    order.orderItems[0].lease === 'Non-Exclusive-Pro-Unlimited' && order.orderItems[0].name === "Davu" ? 
+                    <a href="https://drive.google.com/drive/folders/1nJ_YlnA1ozy6rQdt5ZcUPycaWASknMT_?usp=sharing">Davu NX Pro Files</a> : 
+
+                    order.orderItems[0].lease === 'Copyright' && order.orderItems[0].name === "Davu" ? 
+                    <a href="https://drive.google.com/drive/folders/1nJ_YlnA1ozy6rQdt5ZcUPycaWASknMT_?usp=sharing">Davu Copyright Files</a> : 
+                    
+                    order.orderItems[0].lease === 'Exclusive-Pro-Unlimited' && order.orderItems[0].name === "Davu" ? 
+                    <a href="https://drive.google.com/drive/folders/1nJ_YlnA1ozy6rQdt5ZcUPycaWASknMT_?usp=sharing">Davu EX Pro Files</a> : 
+
+
+                    order.orderItems[0].lease === 'Non-Exclusive-Basic' && order.orderItems[0].name === "Jewry" ? 
+                    <a href="https://drive.google.com/drive/folders/19vEq_apryyoeY7rIVHEk_88dkHJ_Ag5x?usp=sharing">Jewry NX Basic Files</a> : 
+                    
+                    order.orderItems[0].lease === 'Non-Exclusive-Standard' && order.orderItems[0].name === "Jewry" ? 
+                    <a href="https://drive.google.com/drive/folders/1Eb5CPv1lvMH5xj4nVaPjtHHCjHAv0gBM?usp=sharing">Jewry NX Standard Files</a> : 
+                    
+                    order.orderItems[0].lease === 'Non-Exclusive-Premium' && order.orderItems[0].name === "Jewry" ? 
+                    <a href="https://drive.google.com/drive/folders/1BZ_I-4SOcJjAyEz-brqydwkhBgbZmCFX?usp=sharing">Jewry NX Premium Files</a> : 
+
+                    order.orderItems[0].lease === 'Non-Exclusive-Pro-Unlimited' && order.orderItems[0].name === "Jewry" ? 
+                    <a href="https://drive.google.com/drive/folders/1BZ_I-4SOcJjAyEz-brqydwkhBgbZmCFX?usp=sharing">Jewry NX Pro Files</a> : 
+
+                    order.orderItems[0].lease === 'Copyright' && order.orderItems[0].name === "Jewry" ? 
+                    <a href="https://drive.google.com/drive/folders/1epoLsat5MPM62phw5L2AhEQpsVTqC1X7?usp=sharing">Jewry Copyright Files</a> : 
+                    
+                    order.orderItems[0].lease === 'Exclusive-Pro-Unlimited' && order.orderItems[0].name === "Jewry" ? 
+                    <a href="https://drive.google.com/drive/folders/1RzZcA381L1iB_BDJ3ZXdpBBMt5VbP5Tq?usp=sharing">Jewry EX Pro Files</a> : 
+
+
+
+                    order.orderItems[0].lease === 'Non-Exclusive-Basic' && order.orderItems[0].name === "Made It" ? 
+                    <a href="https://drive.google.com/drive/folders/1V71Tod_ASNB8kDJUPi7NlBSkmW55clgM?usp=sharing">Made It NX Basic Files</a> : 
+                    
+                    order.orderItems[0].lease === 'Non-Exclusive-Standard' && order.orderItems[0].name === "Made It" ? 
+                    <a href="https://drive.google.com/drive/folders/1xDzH2FdXeIgPRFjDCOONZe_yo-2bbFj6?usp=sharing">Made It NX Standard Files</a> : 
+                    
+                    order.orderItems[0].lease === 'Non-Exclusive-Premium' && order.orderItems[0].name === "Made It" ? 
+                    <a href="https://drive.google.com/drive/folders/1dgYeYTxDbwIpUKA-fwV8srMvYdQxtQKH?usp=sharing">Made It NX Premium Files</a> : 
+
+                    order.orderItems[0].lease === 'Non-Exclusive-Pro-Unlimited' && order.orderItems[0].name === "Made It" ? 
+                    <a href="https://drive.google.com/drive/folders/1dgYeYTxDbwIpUKA-fwV8srMvYdQxtQKH?usp=sharing">Made It NX Pro Files</a> : 
+
+                    order.orderItems[0].lease === 'Copyright' && order.orderItems[0].name === "Made It" ? 
+                    <a href="https://drive.google.com/drive/folders/1fteYNUg4kMxlxNspfp8UHsWUGRT3OrTJ?usp=sharing">Made It Copyright Files</a> : 
+                    
+                    order.orderItems[0].lease === 'Exclusive-Pro-Unlimited' && order.orderItems[0].name === "Made It" ? 
+                    <a href="https://drive.google.com/drive/folders/1fteYNUg4kMxlxNspfp8UHsWUGRT3OrTJ?usp=sharing">Made It EX Pro Files</a> : 
+
+
+
+
+                    order.orderItems[0].lease === 'Non-Exclusive-Basic' && order.orderItems[0].name === "Nuisance" ? 
+                    <a href="https://drive.google.com/drive/folders/1k-qIJzsvG-I7MdVMxToD99IH_FkaXWT_?usp=sharing">Nuisance NX Basic Files</a> : 
+                    
+                    order.orderItems[0].lease === 'Non-Exclusive-Standard' && order.orderItems[0].name === "Nuisance" ? 
+                    <a href="https://drive.google.com/drive/folders/1kiG6x4K6kXu7zDUFNYvJiQc1UKC-JBJv?usp=sharing">Nuisance NX Standard Files</a> : 
+                    
+                    order.orderItems[0].lease === 'Non-Exclusive-Premium' && order.orderItems[0].name === "Nuisance" ? 
+                    <a href="https://drive.google.com/drive/folders/1AzydP7dnaJ-gBAUkW670vEt01dOZvImM?usp=sharing">Nuisance NX Premium Files</a> : 
+
+                    order.orderItems[0].lease === 'Non-Exclusive-Pro-Unlimited' && order.orderItems[0].name === "Nuisance" ? 
+                    <a href="https://drive.google.com/drive/folders/1AzydP7dnaJ-gBAUkW670vEt01dOZvImM?usp=sharing">Nuisance NX Pro Files</a> : 
+
+                    order.orderItems[0].lease === 'Copyright' && order.orderItems[0].name === "Nuisance" ? 
+                    <a href="https://drive.google.com/drive/folders/1fvNKqCv49SoUoDASFhkq5tBfwPF1EQn_?usp=sharing">Nuisance Copyright Files</a> : 
+                    
+                    order.orderItems[0].lease === 'Exclusive-Pro-Unlimited' && order.orderItems[0].name === "Nuisance" ? 
+                    <a href="https://drive.google.com/drive/folders/1E6CfjOOc2BalQQaQl6Mt_npb1YIZrVju?usp=sharing">Nuisance EX Pro Files</a> : 
+
+
+
+                    order.orderItems[0].lease === 'Non-Exclusive-Basic' && order.orderItems[0].name === "Pages" ? 
+                    <a href="https://drive.google.com/drive/folders/1gwtohNFwC6OENLNAW2kcGhlXB8DP6x8h?usp=sharing">Pages NX Basic Files</a> : 
+                    
+                    order.orderItems[0].lease === 'Non-Exclusive-Standard' && order.orderItems[0].name === "Pages" ? 
+                    <a href="https://drive.google.com/drive/folders/1nmAuq22Sj5sOdlrtRTMvsiF0ZAH4zI7v?usp=sharing">Pages NX Standard Files</a> : 
+                    
+                    order.orderItems[0].lease === 'Non-Exclusive-Premium' && order.orderItems[0].name === "Pages" ? 
+                    <a href="https://drive.google.com/drive/folders/1EeI0ZaBBFUWK6Z5J7YJF75Jek5YGSZIt?usp=sharing">Pages NX Premium Files</a> : 
+
+                    order.orderItems[0].lease === 'Non-Exclusive-Pro-Unlimited' && order.orderItems[0].name === "Pages" ? 
+                    <a href="https://drive.google.com/drive/folders/1EeI0ZaBBFUWK6Z5J7YJF75Jek5YGSZIt?usp=sharing">Pages NX Pro Files</a> : 
+
+                    order.orderItems[0].lease === 'Copyright' && order.orderItems[0].name === "Pages" ? 
+                    <a href="https://drive.google.com/drive/folders/1kuCXwxb4Rk0gN2Am6yvCsT2uTRu7Fs0o?usp=sharing">Pages Copyright Files</a> : 
+                    
+                    order.orderItems[0].lease === 'Exclusive-Pro-Unlimited' && order.orderItems[0].name === "Pages" ? 
+                    <a href="https://drive.google.com/drive/folders/1Uy3zeuE7Mg9ttk-wWln5GG08ZOQz9hvM?usp=sharing">Pages EX Pro Files</a> 
+                    : 
+                  <h2>No Links Availble</h2>
+                  }
                   </td>
                 </tr>)}
               </tbody>

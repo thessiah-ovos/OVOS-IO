@@ -8,6 +8,7 @@ function BeatStore(props) {
       
    // const [qty, setQty] = useState(1);
    const [lease, setLease] = useState(1);
+   const [price, setPrice] = useState('');
    const beatDetails = useSelector((state) => state.beatDetails);
    const {  product, loading, error } = beatDetails;
    const dispatch = useDispatch();
@@ -21,6 +22,13 @@ function BeatStore(props) {
     }, []);
 
     const handleAddToCart = () => {
+         lease === "Non-Exclusive-Basic" ? setPrice(29.99) :
+          lease === "Non-Exclusive-Standard" ? setPrice(49.99) :
+        lease === "Non-Exclusive-Premium" ? setPrice(99.99) :
+        lease === "Non-Exclusive-Pro-Unlimited" ? setPrice(299.99) :
+        lease === "Exclusive-Pro-Unlimited" ? setPrice(499.99) :
+        lease === "Copyright" ? setPrice(1000) :
+        setPrice(29.99) 
         props.history.push("/cart/" + props.match.params.id + "?lease=" + lease)
     }
 
@@ -45,38 +53,30 @@ function BeatStore(props) {
                         <h4>{product.name}</h4>
                     </li>
                     <li>
-                       Price: <b>${product.price}</b>
-                    </li>
-                    <li>
-                       Artist: {product.artist}
-                    </li>
-                    <li>
-                       Audio Test: {/*product.audio*/}
+                       <Link to="/audioplayer">Audio Test</Link>
                     </li>
                 </ul>
              </div> 
              <div className="details-action">
-                 <ul>
-                     
-                    <li>
-                        Price: {product.price}
-                    </li> 
+                 <ul> 
                         <li>
                         <li>
                         Lease: <select value={lease} onChange={(e) => { setLease(e.target.value)}}>
                             <option>Non-Exclusive-Basic</option>
                             <option>Non-Exclusive-Premium</option>
                             <option>Non-Exclusive-Standard</option>
-                            <option>Non-Exclusive-Pro</option>
+                            <option>Non-Exclusive-Pro-Unlimited</option>
                             <option>Exclusive-Pro-Unlimited</option>
                             <option>Copyright</option>
                         </select>
                         </li>
-                      {/*  Qty: <select value={qty} onChange={(e) => { setQty(e.target.value)}}>
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-            </select> */}
+                        
+                        Prices: <li>Non-Exclusive-Basic - $29.99 </li>
+                                <li>Non-Exclusive-Standard - $49.99 </li>
+                                <li>Non-Exclusive-Premium - $99.99 </li>
+                                <li>Non-Exclusive-Pro-Unlimited - $299.99 </li>
+                                <li>Exclusive-Pro-Unlimited - $499.99 </li>
+                                <li>Copyright - $1000 </li>
                         </li> 
                         <li>
                             <button onClick={handleAddToCart} className="button primary" >Add to Cart</button>

@@ -26,8 +26,8 @@ function OrderScreen(props) {
   const { loading, order, error } = orderDetails;
 
   return loading ? <div>Loading ...</div> : error ? <div>{error}</div> :
-
     <div>
+        {console.log(order.orderItems)}
       <div className="placeorder">
         <div className="placeorder-info">
           <div>
@@ -91,7 +91,7 @@ function OrderScreen(props) {
               {loadingPay && <div>Finishing Payment...</div>}
               {!order.isPaid &&
                 <PaypalButton
-                  amount={order.taxPrice}
+                  amount={order.totalPrice}
                   onSuccess={handleSuccessPayment} />
               }
             </li>

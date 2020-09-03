@@ -37,7 +37,8 @@ function App() {
         <button onClick={openMenu}>
           &#9776;
         </button>
-        <Link to="/" >ThessianSound</Link>
+        
+        <Link to="/" >Home</Link>
       </div>
       <div className="header-links">
         <Link to="/cart">Cart</Link>
@@ -51,12 +52,27 @@ function App() {
       <h3>Menu</h3>
       <button className="sidebar-close-button" onClick={closeMenu}>x</button>
       <ul>
+      <li>
+          <Link to="/">Home</Link>
+        </li>
         <li>
-          <a href="index.html">Services</a>
+          <Link to="/beatstore">BeatStore</Link>
+        </li>
+        <li>
+          <Link to="/audioplayer">Beats Audio Player</Link>
+        </li>
+        <li>
+          <Link to="/services">Services</Link>
         </li>
 
         <li>
-          <a href="index.html">Products</a>
+          <Link to="/">Products</Link>
+        </li>
+        <li>
+          <Link to="/">About</Link>
+        </li>
+        <li>
+          <Link to="/contact">Contact Us</Link>
         </li>
 
       </ul>
@@ -69,19 +85,21 @@ function App() {
         <Route path="/profile" component={ProfileScreen} />
         <Route path="/register" component={RegisterScreen} />
         <Route path="/audioplayer" component={AudioPlayer} />
-        <Route path="/billing" component={TermsScreen} />
+        <Route path="/terms" component={TermsScreen} />
         <Route path="/products" component={ProductsScreen} />
         <Route path="/order/:id" component={OrderScreen} />
         <Route path="/payment" component={PaymentScreen} />
         <Route path="/placeorder" component={PlaceOrderScreen} />
         <Route path="/product/:id" component={BeatStore} />
+        <Route path="/beatstore" component={BeatStore} />
         <Route exact path="/" component={Home} />
         <Route path="/cart/:id?" component={CartScreen} />
       </Switch>
         </div>
         </main>
     <footer className="footer">
-      All right reserved.
+    &copy; thessiansound.com | Designed by Thessiah
+      All rights reserved.
     </footer>
   </div>
   </BrowserRouter>

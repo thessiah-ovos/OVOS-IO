@@ -9,13 +9,15 @@ function PlaceOrderScreen(props) {
   const orderCreate = useSelector(state => state.orderCreate);
   const { loading, success, error, order } = orderCreate;
 
-  const { cartItems, payment } = cart;
-  if (!payment.paymentMethod) {
+  const { cartItems, agreement, payment } = cart;
+  if (!agreement.agreementStatus) {
+    props.history.push("/terms");
+  } else if (!payment.paymentMethod) {
     props.history.push("/payment");
   }
  
   const itemsPrice = cartItems.reduce((a, c) => a + c.price * 1, 0);
-  const billingPrice = itemsPrice > 100 ? 0 : 10;
+  const billingPrice = 0;
   const taxPrice = 0;
   const totalPrice = itemsPrice + billingPrice + taxPrice;
  
@@ -24,7 +26,7 @@ function PlaceOrderScreen(props) {
     // create an order
     
     dispatch(createOrder({
-      orderItems: cartItems, payment, itemsPrice, billingPrice, 
+      orderItems: cartItems, agreement, payment, itemsPrice, billingPrice, 
       taxPrice, totalPrice
     }));
   }
@@ -36,7 +38,7 @@ function PlaceOrderScreen(props) {
   }, [success]);
 
   return <div>
-    <CheckoutSteps step1 step2 step3 ></CheckoutSteps>
+    <CheckoutSteps step1 step2 step3 step4></CheckoutSteps>
     <div className="placeorder">
       <div className="placeorder-info">
         <div>
@@ -60,7 +62,7 @@ function PlaceOrderScreen(props) {
                 <div>
                   Cart is empty
           </div>
-                :
+                : 
                 cartItems.map(item =>
                   <li>
                     <div className="cart-image">
