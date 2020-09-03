@@ -6,7 +6,7 @@ import CartScreen from './screens/CartScreen';
 import { useSelector } from 'react-redux';
 import SigninScreen from './screens/SigninScreen';
 import RegisterScreen from './screens/RegisterScreen';
-import BillingScreen from './screens/BillingScreen';
+import TermsScreen from './screens/TermsScreen';
 import PaymentScreen from './screens/PaymentScreen';
 import PlaceOrderScreen from './screens/PlaceOrderScreen';
 import ProductsScreen from './screens/ProductsScreen';
@@ -69,7 +69,7 @@ function App() {
         <Route path="/profile" component={ProfileScreen} />
         <Route path="/register" component={RegisterScreen} />
         <Route path="/audioplayer" component={AudioPlayer} />
-        <Route path="/billing" component={BillingScreen} />
+        <Route path="/billing" component={TermsScreen} />
         <Route path="/products" component={ProductsScreen} />
         <Route path="/order/:id" component={OrderScreen} />
         <Route path="/payment" component={PaymentScreen} />
@@ -87,6 +87,5 @@ function App() {
   </BrowserRouter>
   ); 
 }
-
 
 export default App;

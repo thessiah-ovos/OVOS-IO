@@ -13,13 +13,13 @@ function PlaceOrderScreen(props) {
   if (!payment.paymentMethod) {
     props.history.push("/payment");
   }
+ 
   const itemsPrice = cartItems.reduce((a, c) => a + c.price * 1, 0);
   const billingPrice = itemsPrice > 100 ? 0 : 10;
   const taxPrice = 0;
   const totalPrice = itemsPrice + billingPrice + taxPrice;
  
   const dispatch = useDispatch();
-
   const placeOrderHandler = () => {
     // create an order
     

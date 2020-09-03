@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/static/css/main.2cc728ca.chunk.css",
+    "main.js": "/static/js/main.3dc886fe.chunk.js",
+    "main.js.map": "/static/js/main.3dc886fe.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.c8a21426.js",
+    "runtime-main.js.map": "/static/js/runtime-main.c8a21426.js.map",
+    "static/js/2.9c2357a6.chunk.js": "/static/js/2.9c2357a6.chunk.js",
+    "static/js/2.9c2357a6.chunk.js.map": "/static/js/2.9c2357a6.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.0d12a508a143a160d776a44b23e259b5.js": "/precache-manifest.0d12a508a143a160d776a44b23e259b5.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.2cc728ca.chunk.css.map": "/static/css/main.2cc728ca.chunk.css.map",
+    "static/js/2.9c2357a6.chunk.js.LICENSE.txt": "/static/js/2.9c2357a6.chunk.js.LICENSE.txt",
+    "static/media/davu_tagged_mp3.mp3": "/static/media/davu_tagged_mp3.b5c3c52e.mp3",
+    "static/media/jewry_tagged_mp3.mp3": "/static/media/jewry_tagged_mp3.1ad45875.mp3",
+    "static/media/made_it_tagged_mp3.mp3": "/static/media/made_it_tagged_mp3.e53cdcb4.mp3",
+    "static/media/nuisance_tagged_mp3.mp3": "/static/media/nuisance_tagged_mp3.1af9c6bd.mp3",
+    "static/media/pages_tagged_mp3.mp3": "/static/media/pages_tagged_mp3.7c3ea00e.mp3"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c8a21426.js",
+    "static/js/2.9c2357a6.chunk.js",
+    "static/css/main.2cc728ca.chunk.css",
+    "static/js/main.3dc886fe.chunk.js"
+  ]
+}
