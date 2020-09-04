@@ -8,15 +8,17 @@ import Download from './Download';
 function Welcome(){
     return (
         <div className="welcome">
-      <ActionCall />
       <div id="desc">
-        The best in online Audio Production
+      THESSIAN SOUND LLC | OVOS 
+      <br></br>
+      <br></br>
+      <br></br>
+      <div id="minidesc">
+      The best in online Audio Production </div>
       </div> 
-      <HomeScreen />
-      <AllServices /> 
-      <Download />       
-
-  </div>
+      <section className="allservices">
+      <AllServices /> </section>
+    </div>
     )
 }
 

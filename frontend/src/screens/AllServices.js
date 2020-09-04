@@ -1,5 +1,7 @@
 import React from 'react';
+import {Link } from 'react-router-dom';
 import SigninScreen from './SigninScreen';
+import AudioPlayer from '../AudioPlayer';
 
 
 function AllServices() {
@@ -15,12 +17,13 @@ function AllServices() {
 
         Get any of our beats to be used in your musical projects today!</p>
         <div id="go-to-store">
-        <button>VISIT</button>
+        <Link to="/beatstore">Visit Beatstore</Link>
+        <div></div>
+        <Link to="/audioplayer">Sample Beats</Link>
         </div>
         </div>
         </div> 
-
-
+        <br></br>
         <div class="services">
         <div class="mix-master"></div>
         <h2 id="mixing-mastering">Mixing & Mastering</h2>
@@ -28,9 +31,6 @@ function AllServices() {
         <p id="mix-master-info">Our experienced engineers are here to help you get that desired commercial sound. All we ask for in return is a decently recorded session of your project, we will do the rest! 
 
           Thessian Sound has made high quality mixing and mastering more affordable and our clients retains total creative control. We offer different packages to fit your intended production budget. Ranging from small projects like a single demo to a full blown 15+ track album.</p>
-          
-        <button id="visit-services">VISIT</button>
-
         </div>
         </div> 
 
@@ -42,8 +42,7 @@ function AllServices() {
 
         You will have your personalized account whereby you’ll be able to access all your beats, and upload all your files for mixing and mastering along with production notes if applicable. </p>
 
-        <button id="sign-up" onClick={<SigninScreen/>}>
-          SIGN UP</button>
+        <Link to="/signin">Sign Up/In</Link>
 
         </div>
         </div>

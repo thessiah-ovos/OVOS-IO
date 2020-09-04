@@ -4,7 +4,7 @@ html{
 }
 body{
   font: 1.6rem Helvetica;
-  height: 100vh;
+  height: 250vh;
   margin: 0;
  /* background-color: #f8f6fc; */
 }
@@ -57,17 +57,50 @@ button{
 }
 .main{
   grid-area: main;
- /* background-image: url("./background-for-site.jpg") */
-
 }
+
+.welcome {
+  height: 25rem;
+  background-image: url("./background-for-site.jpg");
+  opacity: 0.9; 
+  display: flex;
+}
+
+#desc {
+  color:#ffffff;
+  font-family: Helvetica;
+  padding: 1rem;
+  align-items: center;
+  font-weight: bold;
+  display: flex;
+  margin: auto;
+  font-size: 3rem;
+}
+
+#desc #minidesc {
+ font-size: 1.3rem;
+}
+
+.allservices {
+  margin: 5.5%;
+  display: inline-block;
+  position: absolute;
+  top: 300px;
+}
+
 .footer{
   grid-area: footer;
   background-color: #203040;
   color: #ffffff;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
+
+.footer .footer-bottom {
+  justify-content: center;
+  text-align: center;
+}
+
 a{
   text-decoration: none;
 }
@@ -127,7 +160,7 @@ a:hover{
   transition: all .5sec;
   transform: translateX(-30rem);
   width: 30rem;
-  background-color: #f0f0f0;
+  background-color: #cacdf0;
   height: 100%;
 }
 .sidebar.open{

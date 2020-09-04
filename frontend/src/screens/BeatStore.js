@@ -22,17 +22,9 @@ function BeatStore(props) {
     }, []);
 
     const handleAddToCart = () => {
-         lease === "Non-Exclusive-Basic" ? setPrice(29.99) :
-          lease === "Non-Exclusive-Standard" ? setPrice(49.99) :
-        lease === "Non-Exclusive-Premium" ? setPrice(99.99) :
-        lease === "Non-Exclusive-Pro-Unlimited" ? setPrice(299.99) :
-        lease === "Exclusive-Pro-Unlimited" ? setPrice(499.99) :
-        lease === "Copyright" ? setPrice(1000) :
-        setPrice(29.99) 
         props.history.push("/cart/" + props.match.params.id + "?lease=" + lease)
     }
 
-    Howler.volume(0.5)
     return <div>
         <div className="back-to-home">
             <Link to="/">Home</Link>
@@ -60,6 +52,13 @@ function BeatStore(props) {
              <div className="details-action">
                  <ul> 
                         <li>
+                             
+                        Prices: <li>Non-Exclusive-Basic - $29.99 </li>
+                                <li>Non-Exclusive-Standard - $49.99 </li>
+                                <li>Non-Exclusive-Premium - $99.99 </li>
+                                <li>Non-Exclusive-Pro-Unlimited - $299.99 </li>
+                                <li>Exclusive-Pro-Unlimited - $499.99 </li>
+                                <li>Copyright - $1000 </li>
                         <li>
                         Lease: <select value={lease} onChange={(e) => { setLease(e.target.value)}}>
                             <option>Non-Exclusive-Basic</option>
@@ -70,13 +69,6 @@ function BeatStore(props) {
                             <option>Copyright</option>
                         </select>
                         </li>
-                        
-                        Prices: <li>Non-Exclusive-Basic - $29.99 </li>
-                                <li>Non-Exclusive-Standard - $49.99 </li>
-                                <li>Non-Exclusive-Premium - $99.99 </li>
-                                <li>Non-Exclusive-Pro-Unlimited - $299.99 </li>
-                                <li>Exclusive-Pro-Unlimited - $499.99 </li>
-                                <li>Copyright - $1000 </li>
                         </li> 
                         <li>
                             <button onClick={handleAddToCart} className="button primary" >Add to Cart</button>

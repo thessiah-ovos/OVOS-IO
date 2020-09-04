@@ -38,7 +38,7 @@ function App() {
           &#9776;
         </button>
         
-        <Link to="/" >Home</Link>
+        <Link to="/" >OVOS</Link>
       </div>
       <div className="header-links">
         <Link to="/cart">Cart</Link>
@@ -78,6 +78,8 @@ function App() {
       </ul>
     </aside>
     <main className="main">
+      <div className="ovosWelx">
+      </div>
       <div className="content">
         <Switch>
         <Route path="/signin" component={SigninScreen} />
@@ -91,15 +93,18 @@ function App() {
         <Route path="/payment" component={PaymentScreen} />
         <Route path="/placeorder" component={PlaceOrderScreen} />
         <Route path="/product/:id" component={BeatStore} />
-        <Route path="/beatstore" component={BeatStore} />
-        <Route exact path="/" component={Home} />
+        <Route path="/beatstore" component={Home} />
+        <Route exact path="/" component={Welcome} />
         <Route path="/cart/:id?" component={CartScreen} />
       </Switch>
         </div>
         </main>
     <footer className="footer">
-    &copy; thessiansound.com | Designed by Thessiah
-      All rights reserved.
+      <div>
+        &copy; thessiansound.com | Designed by Thessiah 
+        <div className="footer-bottom">
+        All rights reserved. </div>
+      </div>
     </footer>
   </div>
   </BrowserRouter>
