@@ -18,6 +18,7 @@ const orderItemSchema = new mongoose.Schema({
   name: { type: String, required: true },
  // qty: { type: Number, required: true },
   lease: { type: String, required: true},
+  price: { type: Number, required: true },
   image: { type: String, required: true },
   price: { type: Number, required: true },
   product: {
@@ -33,6 +34,7 @@ const orderSchema = new mongoose.Schema({
   payment: paymentSchema,
   agreement: agreementSchema,
   itemsPrice: { type: Number },
+  price: { type: Number },
   lease: { type: String },
   taxPrice: { type: Number },
   billingPrice: { type: Number },

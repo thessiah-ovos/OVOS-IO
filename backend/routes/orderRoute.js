@@ -40,6 +40,7 @@ router.post("/", isAuth, async (req, res) => {
     payment: req.body.payment,
     agreement: req.body.agreement,
     itemsPrice: req.body.itemsPrice,
+    price: req.body.price,
     lease: req.body.lease,
     taxPrice: req.body.taxPrice,
     billingPrice: req.body.billingPrice,

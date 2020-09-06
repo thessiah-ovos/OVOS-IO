@@ -5,7 +5,6 @@ export default {
     name: 'Davu',
     category: 'R&B',
     image: '/coverarts/Davu_Instrumental.jpg',
-    price: 29.99,
     artist: ' Thessiah',
     audio: '/beatclips/davu_tagged_mp3.mp3'
     },
@@ -15,7 +14,6 @@ export default {
       name: 'Jewry',
       category: 'Rap',
       image: '/coverarts/Davu_Instrumental.jpg',
-      price: 29.99,
       artist: ' ',
       audio: '/beatclips/jewry_tagged_mp3.mp3'
     },
@@ -24,7 +22,6 @@ export default {
       name: 'Made It',
       category: 'Dancehall',
       image: '/coverarts/Davu_Instrumental.jpg',
-      price: 29.99,
       artist: ' ',
       audio: '/beatclips/made_it_tagged_mp3.mp3'
     },
@@ -33,7 +30,6 @@ export default {
       name: 'Nuisance',
       category: 'Dancehall',
       image: '/coverarts/Davu_Instrumental.jpg',
-      price: 29.99,
       artist: ' ',
       audio: '/beatclips/nuisance_tagged_mp3.mp3'
     },
@@ -42,7 +38,6 @@ export default {
       name: 'Pages',
       category: 'Dancehall',
       image: '/coverarts/Davu_Instrumental.jpg',
-      price: 29.99,
       artist: ' ',
       audio: '/beatclips/pages_tagged_mp3.mp3'
     },

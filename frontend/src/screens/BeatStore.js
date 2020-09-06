@@ -8,7 +8,7 @@ function BeatStore(props) {
       
    // const [qty, setQty] = useState(1);
    const [lease, setLease] = useState(1);
-   const [price, setPrice] = useState('');
+   const [price, setPrice] = useState(29.99);
    const beatDetails = useSelector((state) => state.beatDetails);
    const {  product, loading, error } = beatDetails;
    const dispatch = useDispatch();
@@ -22,7 +22,12 @@ function BeatStore(props) {
     }, []);
 
     const handleAddToCart = () => {
-        props.history.push("/cart/" + props.match.params.id + "?lease=" + lease)
+      setPrice(39.99)
+      console.log(price)
+        props.history.push("/cart/" + props.match.params.id + "?lease=" + lease); //+ "?price=" + price
+    }
+
+    const handlePrice = () => {
     }
 
     return <div>
@@ -45,21 +50,21 @@ function BeatStore(props) {
                         <h4>{product.name}</h4>
                     </li>
                     <li>
-                       <Link to="/audioplayer">Audio Test</Link>
+                       <Link to="/audioplayer">Audio Sampler</Link>
                     </li>
                 </ul>
              </div> 
              <div className="details-action">
                  <ul> 
                         <li>
-                             
+                        <li>            
                         Prices: <li>Non-Exclusive-Basic - $29.99 </li>
                                 <li>Non-Exclusive-Standard - $49.99 </li>
                                 <li>Non-Exclusive-Premium - $99.99 </li>
                                 <li>Non-Exclusive-Pro-Unlimited - $299.99 </li>
                                 <li>Exclusive-Pro-Unlimited - $499.99 </li>
                                 <li>Copyright - $1000 </li>
-                        <li>
+
                         Lease: <select value={lease} onChange={(e) => { setLease(e.target.value)}}>
                             <option>Non-Exclusive-Basic</option>
                             <option>Non-Exclusive-Premium</option>

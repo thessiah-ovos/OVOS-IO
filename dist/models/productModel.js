@@ -38,11 +38,6 @@ const productSchema = new _mongoose.default.Schema({
     type: String,
     required: true
   },
-  price: {
-    type: Number,
-    default: 0,
-    required: true
-  },
   category: {
     type: String,
     required: true

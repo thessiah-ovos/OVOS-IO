@@ -49,6 +49,10 @@ const orderItemSchema = new _mongoose.default.Schema({
     type: String,
     required: true
   },
+  price: {
+    type: Number,
+    required: true
+  },
   image: {
     type: String,
     required: true
@@ -73,6 +77,9 @@ const orderSchema = new _mongoose.default.Schema({
   payment: paymentSchema,
   agreement: agreementSchema,
   itemsPrice: {
+    type: Number
+  },
+  price: {
     type: Number
   },
   lease: {

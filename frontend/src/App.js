@@ -41,6 +41,8 @@ function App() {
         <Link to="/" >OVOS</Link>
       </div>
       <div className="header-links">
+        <Link to="/beatstore">Beat Store</Link>
+        <Link to="/audioplayer">Audio Sampler</Link>
         <Link to="/cart">Cart</Link>
         {
           userInfo ? <Link to="/profile">{userInfo.name}</Link>:

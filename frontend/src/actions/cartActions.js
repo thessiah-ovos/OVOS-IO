@@ -3,7 +3,7 @@ import Cookie from 'js-cookie';
 
 const { default: Axios } = require("axios")
 
-const addToCart = (beatId, lease) => async (dispatch, getState) =>{
+const addToCart = (beatId, lease, price) => async (dispatch, getState) =>{
     try {
         const { data } = await Axios.get("/api/products/" + beatId);
         dispatch({
@@ -11,7 +11,7 @@ const addToCart = (beatId, lease) => async (dispatch, getState) =>{
             product: data._id,
             name: data.name,
             image: data.image,
-            price: data.price,
+            price,
             lease
         }
     });

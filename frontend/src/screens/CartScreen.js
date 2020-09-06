@@ -1,12 +1,12 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { addToCart, removeFromCart } from '../actions/cartActions';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 function CartScreen(props) {
 
   const cart = useSelector(state => state.cart);
-
   const { cartItems } = cart;
+  const [price, setPrice] = useState(29.99);
 
 
   const beatId = props.match.params.id;
@@ -15,13 +15,14 @@ function CartScreen(props) {
   const dispatch = useDispatch();
 
   console.log(lease);
+  //console.log(price);
 
   const removeFromCartHandler = (beatId) => {
     dispatch(removeFromCart(beatId));
   }
   useEffect(() => {
     if (beatId) {
-      dispatch(addToCart(beatId, lease));
+      dispatch(addToCart(beatId, lease, price));
     }
   }, []);
 
@@ -37,7 +38,6 @@ function CartScreen(props) {
             Shopping Cart
           </h3>
           <div>
-            Price
           </div>
         </li>
         {
@@ -60,6 +60,8 @@ function CartScreen(props) {
                   </div>
                   <div>
                     Lease: {item.lease}
+                   
+
                     <button type="button" className="button" onClick={() => removeFromCartHandler(item.product)} >
                       Delete
                     </button>

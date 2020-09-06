@@ -44,7 +44,6 @@ router.put('/:id', isAuth, isAdmin, async (req, res) => {
   const product = await Product.findById(beatId);
   if (product) {
     product.name = req.body.name;
-    product.price = req.body.price;
     product.image = req.body.image;
     product.artist = req.body.artist;
     product.category = req.body.category;
@@ -72,7 +71,6 @@ router.delete('/:id', isAuth, isAdmin, async (req, res) => {
 router.post('/', isAuth, isAdmin, async (req, res) => {
   const product = new Product({
     name: req.body.name,
-    price: req.body.price,
     image: req.body.image,
     artist: req.body.artist,
     category: req.body.category,

@@ -59,7 +59,6 @@ router.put('/:id', _util.isAuth, _util.isAdmin, async (req, res) => {
 
   if (product) {
     product.name = req.body.name;
-    product.price = req.body.price;
     product.image = req.body.image;
     product.artist = req.body.artist;
     product.category = req.body.category;
@@ -93,7 +92,6 @@ router.delete('/:id', _util.isAuth, _util.isAdmin, async (req, res) => {
 router.post('/', _util.isAuth, _util.isAdmin, async (req, res) => {
   const product = new _productModel.default({
     name: req.body.name,
-    price: req.body.price,
     image: req.body.image,
     artist: req.body.artist,
     category: req.body.category,
