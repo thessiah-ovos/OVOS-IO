@@ -74,8 +74,7 @@ const deleteBeat = (beatId) => async (dispatch, getState) => {
       dispatch({ type: BEAT_DELETE_FAIL, payload: error.message });
     }
   };
-  
-
+  //
 export { 
     listBeats,
     detailsBeat,
