@@ -8,7 +8,7 @@ function BeatStore(props) {
       
    // const [qty, setQty] = useState(1);
    const [lease, setLease] = useState(1);
-   const [price, setPrice] = useState(29.99);
+  // const [price, setPrice] = useState('');
    const beatDetails = useSelector((state) => state.beatDetails);
    const {  product, loading, error } = beatDetails;
    const dispatch = useDispatch();
@@ -22,9 +22,12 @@ function BeatStore(props) {
     }, []);
 
     const handleAddToCart = () => {
-      setPrice(39.99)
-      console.log(price)
-        props.history.push("/cart/" + props.match.params.id + "?lease=" + lease); //+ "?price=" + price
+        var price;
+        console.log(lease);
+       lease === "Copyright" ? price = 1000 : 
+       lease === "Non-Exclusive-Basic" ? price = 29.99 : price = 11;
+        console.log(price)
+        props.history.push("/cart/" + props.match.params.id + "?price:" + price + "?lease=" + lease); //+ "?price=" + price
     }
 
     const handlePrice = () => {

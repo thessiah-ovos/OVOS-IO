@@ -40,6 +40,6 @@ var _default = {
     image: '/coverarts/Davu_Instrumental.jpg',
     artist: ' ',
     audio: '/beatclips/pages_tagged_mp3.mp3'
-  }]
+  }] //c
 };
 exports.default = _default;

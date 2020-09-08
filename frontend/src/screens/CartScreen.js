@@ -6,16 +6,20 @@ function CartScreen(props) {
 
   const cart = useSelector(state => state.cart);
   const { cartItems } = cart;
-  const [price, setPrice] = useState(29.99);
+ // const [price, setPrice] = useState(29.99);
 
 
   const beatId = props.match.params.id;
-  const lease = props.location.search ? props.location.search.split("=")[1] : 2;
+  const arr = props.location.search.split(/([0-9]+)/)
+  console.log(arr[1])
+  const price = arr[1];
+  const lease = props.location.search ? props.location.search.split("=")[1] : 4;
+
 //  const qty = props.location.search ? Number(props.location.search.split("=")[1]) : 1;
   const dispatch = useDispatch();
 
   console.log(lease);
-  //console.log(price);
+  console.log(props.match.params);
 
   const removeFromCartHandler = (beatId) => {
     dispatch(removeFromCart(beatId));
@@ -78,7 +82,9 @@ function CartScreen(props) {
     </div>
     <div className="cart-action">
       <h3>
-        Subtotal: ${cartItems.reduce((a, c) => a + c.price, 0)}
+          {console.log(cartItems)}
+          Subtotal: ${cartItems.reduce((a, c) => a + c.price * 1, 0)}
+        
         
          
       </h3>
