@@ -16,6 +16,8 @@ import OrdersScreen from './screens/OrdersScreen';
 import Home from './screens/Home';
 import AudioPlayer from './AudioPlayer';
 import Welcome from './screens/Welcome';
+import Services from './screens/Services';
+import ContactUs from './screens/ContactUs';
 
 function App() {
 
@@ -34,15 +36,13 @@ function App() {
    <div className="grid-container">
     <header className="header">
       <div className="brand">
-        <button onClick={openMenu}>
-          &#9776;
-        </button>
         
         <Link to="/" >OVOS</Link>
       </div>
       <div className="header-links">
+        <Link to="/">Home</Link>
         <Link to="/beatstore">Beat Store</Link>
-        <Link to="/audioplayer">Audio Sampler</Link>
+        <Link to="/contact">Contact</Link>
         <Link to="/cart">Cart</Link>
         {
           userInfo ? <Link to="/profile">{userInfo.name}</Link>:
@@ -50,35 +50,7 @@ function App() {
         }
       </div>
     </header>
-    <aside className="sidebar">
-      <h3>Menu</h3>
-      <button className="sidebar-close-button" onClick={closeMenu}>x</button>
-      <ul>
-      <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/beatstore">BeatStore</Link>
-        </li>
-        <li>
-          <Link to="/audioplayer">Beats Audio Player</Link>
-        </li>
-        <li>
-          <Link to="/services">Services</Link>
-        </li>
-
-        <li>
-          <Link to="/">Products</Link>
-        </li>
-        <li>
-          <Link to="/">About</Link>
-        </li>
-        <li>
-          <Link to="/contact">Contact Us</Link>
-        </li>
-
-      </ul>
-    </aside>
+    
     <main className="main">
       <div className="ovosWelx">
       </div>
@@ -86,6 +58,8 @@ function App() {
         <Switch>
         <Route path="/signin" component={SigninScreen} />
         <Route path="/orders" component={OrdersScreen} />
+        <Route path="/services" component={Services} />
+        <Route path="/contact" component={ContactUs} />
         <Route path="/profile" component={ProfileScreen} />
         <Route path="/register" component={RegisterScreen} />
         <Route path="/audioplayer" component={AudioPlayer} />

@@ -24,13 +24,14 @@ function BeatStore(props) {
     const handleAddToCart = () => {
         var price;
         console.log(lease);
-       lease === "Copyright" ? price = 1000 : 
-       lease === "Non-Exclusive-Basic" ? price = 29.99 : price = 11;
+        lease === "Non-Exclusive-Basic" ? price = 29.99 :
+        lease === "Non-Exclusive-Standard" ? price = 49.99 :
+        lease === "Non-Exclusive-Premium" ? price = 99.99 :
+        lease === "Non-Exclusive-Pro-Unlimited" ? price = 299.99 :
+        lease === "Exclusive-Pro-Unlimited" ? price = 499.99 :
+        lease === "Copyright" ? price = 1000 : price = 0;
         console.log(price)
         props.history.push("/cart/" + props.match.params.id + "?price:" + price + "?lease=" + lease); //+ "?price=" + price
-    }
-
-    const handlePrice = () => {
     }
 
     return <div>
