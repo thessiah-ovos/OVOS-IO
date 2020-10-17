@@ -107,7 +107,7 @@ a{
 a:hover{
   color:#ff8000
 }
-/* Home Screen */
+/* Beat Store  */
 .products {
   display: flex;
   justify-content: center;
@@ -119,18 +119,20 @@ a:hover{
   padding: 0;
   flex: 0 1 34rem;
   margin: 1rem;
-  height: 50rem;
-  border-bottom: .1rem #c0c0c0 solid;
+  height: 20rem;
+  border-bottom: .01rem #c0c0c0 solid;
 }
 .product{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100%;
+  height: 50%;
 }
 .product-name{
   font-size: 2rem;
   font-weight: bold;
+  font-family: 'Courier New', Courier, monospace;
+  color: #570757;
 }
 .product-artist{
   font-size: 1.2rem;
@@ -141,8 +143,18 @@ a:hover{
   font-weight: bold;
 }
 .product-image{
-  max-width: 34rem;
-  max-height: 34rem;
+  max-width: 14rem;
+  max-height: 14rem;
+  transition: 1s;
+}
+
+.product-image:hover {
+  transform: scale(1.9);
+}
+
+.brand-logo {
+  max-height: 5rem;
+  max-width: 4rem;
 }
 
 /* Sidebar */
@@ -303,6 +315,49 @@ a:hover{
   align-items: center;
   height: 100%;
 }
+
+.contact-us {
+  margin: 1rem;
+  margin-top: 3rem;
+  height: 80%;
+}
+
+.about {
+  background-image: url('/images/background-for-site2.jpg');
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.about-us {
+  height: 70%;
+  align-items: center;
+}
+
+.about-logo {
+ /* background-image: url('/Thessian-Sound-logo.png'); */
+  background-position: center;
+  background-size: fill;
+  background-repeat: no-repeat;
+}
+
+.about-logo   {
+  background-blend-mode: hue;
+}
+
+.about-brand {
+  color: #fff;
+}
+
+.about-container {
+  align-self: center;
+  display: flex;
+  width: 32rem;
+  border: 0.1rem #c0c0c0 solid;
+  border-radius: 0.5rem;
+  list-style-type: none;
+}
+
 .form-container {
   display: flex;
   flex-direction: column;
@@ -312,6 +367,7 @@ a:hover{
   border-radius: 0.5rem;
   list-style-type: none;
 }
+
 .form-container li {
   display: flex;
   flex-direction: column;
@@ -324,28 +380,6 @@ input {
   border-radius: 0.5rem;
 }
 
-/* Products */
-
-.product-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-
-.content-margined {
-  margin: 1rem;
-}
-
-.table {
-  width: 100%;
-}
-th {
-  text-align: left;
-}
-tbody > tr:nth-child(odd) {
-  background-color: #f0f0f0;
-}
-
 
 /* Products */
 
@@ -367,6 +401,13 @@ th {
 }
 tbody > tr:nth-child(odd) {
   background-color: #f0f0f0;
+}
+
+.pricing img {
+  display: flex;
+  position: relative;
+  margin: 2rem;
+  justify-content: center;
 }
 
 /* Checkout Steps */
@@ -435,8 +476,6 @@ tbody > tr:nth-child(odd) {
 }
 
 
-
-
 /* Profile */
 
 .profile {
@@ -501,4 +540,16 @@ tbody > tr:nth-child(odd) {
 
 .categories a:hover {
   background-color: #c0c0c0;
+}
+
+@media screen and (max-width: 960px) {
+
+  .pricing img {
+    display: flex;
+    position: relative;
+    margin: 2rem;
+    justify-content: center;
+    max-width: 50rem;
+    max-height: 50rem;
+  }
 }

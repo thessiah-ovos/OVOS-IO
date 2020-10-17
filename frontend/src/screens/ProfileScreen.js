@@ -245,7 +245,31 @@ function ProfileScreen(props) {
                     <a href="https://drive.google.com/drive/folders/1kuCXwxb4Rk0gN2Am6yvCsT2uTRu7Fs0o?usp=sharing">Pages Copyright Files</a> : 
                     
                     order.orderItems[0].lease === 'Exclusive-Pro-Unlimited' && order.orderItems[0].name === "Pages" ? 
-                    <a href="https://drive.google.com/drive/folders/1Uy3zeuE7Mg9ttk-wWln5GG08ZOQz9hvM?usp=sharing">Pages EX Pro Files</a> 
+                    <a href="https://drive.google.com/drive/folders/1Uy3zeuE7Mg9ttk-wWln5GG08ZOQz9hvM?usp=sharing">Pages EX Pro Files</a> :
+                    
+                    
+                    
+
+                    order.orderItems[0].lease === 'Non-Exclusive-Basic' && order.orderItems[0].name === "Chapter 1" ? 
+                    <a href="https://drive.google.com/drive/folders/14WvceRWNiohKja000gIRCR0YRopfttNA?usp=sharing">Chapter 1 NX Basic Files</a> : 
+                    
+                    order.orderItems[0].lease === 'Non-Exclusive-Standard' && order.orderItems[0].name === "Chapter 1" ? 
+                    <a href="https://drive.google.com/drive/folders/1dKpzyUDK2VWUrv-MLhX4PhnavsayKRh6?usp=sharing">Chapter 1 NX Standard Files</a> : 
+                    
+                    order.orderItems[0].lease === 'Non-Exclusive-Premium' && order.orderItems[0].name === "Chapter 1" ? 
+                    <a href="https://drive.google.com/drive/folders/1F9W94SlaOfef9UvMkuoHQKKcUv1EQx7J?usp=sharing">Chapter 1 NX Premium Files</a> : 
+
+                    order.orderItems[0].lease === 'Non-Exclusive-Pro-Unlimited' && order.orderItems[0].name === "Chapter 1" ? 
+                    <a href="https://drive.google.com/drive/folders/1F9W94SlaOfef9UvMkuoHQKKcUv1EQx7J?usp=sharing">Chapter 1 NX Pro Files</a> : 
+
+                    order.orderItems[0].lease === 'Copyright' && order.orderItems[0].name === "Chapter 1" ? 
+                    <a href="https://drive.google.com/drive/folders/1AGIH_YP3JC-07MvJM_vyEjYzZbSbKkhq?usp=sharing">Chapter 1 Copyright Files</a> : 
+                    
+                    order.orderItems[0].lease === 'Exclusive-Pro-Unlimited' && order.orderItems[0].name === "Chapter 1" ? 
+                    <a href="https://drive.google.com/drive/folders/1AGIH_YP3JC-07MvJM_vyEjYzZbSbKkhq?usp=sharing">Chapter 1 EX Pro Files</a> 
+                
+                    
+                    
                     : 
                   <h2>No Links Availble</h2>
                   }

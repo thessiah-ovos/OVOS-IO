@@ -38,5 +38,63 @@
   }
 }
 
+/* responsive design */
+
+@media screen and (max-width: 715px) {
+  header {
+    height: 250px;
+    background-position: 0 -30px;
+  }
+  header .mobile {
+    display: inline-block;
+  }
+  header .desktop {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  header {
+    height: 200px;
+    background-position: 0 -0px;
+  }
+}
 
 
+.home,
+.services,
+.products,
+.sign-up {
+  display: flex;
+  height: 90vh;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+}
+
+.services {
+  /*background-image: url('/images/img-2.jpg'); */
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 100px;
+}
+
+.productsp {
+  /* background-image: url('/images/img-1.jpg'); */
+   background-position: center;
+   background-size: fill;
+   background-repeat: no-repeat;
+   color: #fff;
+   font-size: 100px;
+ }
+
+.sign-up {
+ /* background-image: url('/images/img-8.jpg');*/
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 100px;
+}

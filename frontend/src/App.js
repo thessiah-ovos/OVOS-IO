@@ -18,6 +18,11 @@ import AudioPlayer from './AudioPlayer';
 import Welcome from './screens/Welcome';
 import Services from './screens/Services';
 import ContactUs from './screens/ContactUs';
+import Navbar from './screens/Navbar';
+import Root from './screens/Root';
+import About from './screens/About';
+import Footer from './Footer';
+import Pricing from './screens/Pricing';
 
 function App() {
 
@@ -32,31 +37,12 @@ function App() {
   };
 
   return (
+    <>
     <BrowserRouter>
-   <div className="grid-container">
-    <header className="header">
-      <div className="brand">
-        
-        <Link to="/" >OVOS</Link>
-      </div>
-      <div className="header-links">
-        <Link to="/">Home</Link>
-        <Link to="/beatstore">Beat Store</Link>
-        <Link to="/contact">Contact</Link>
-        <Link to="/cart">Cart</Link>
-        {
-          userInfo ? <Link to="/profile">{userInfo.name}</Link>:
-          <Link to="/signin">Sign In</Link>
-        }
-      </div>
-    </header>
-    
-    <main className="main">
-      <div className="ovosWelx">
-      </div>
-      <div className="content">
-        <Switch>
-        <Route path="/signin" component={SigninScreen} />
+    <Navbar />
+    <Switch>
+    <Route exact path='/' component={Root} />
+    <Route path="/signin" component={SigninScreen} />
         <Route path="/orders" component={OrdersScreen} />
         <Route path="/services" component={Services} />
         <Route path="/contact" component={ContactUs} />
@@ -70,20 +56,13 @@ function App() {
         <Route path="/placeorder" component={PlaceOrderScreen} />
         <Route path="/product/:id" component={BeatStore} />
         <Route path="/beatstore" component={Home} />
-        <Route exact path="/" component={Welcome} />
         <Route path="/cart/:id?" component={CartScreen} />
-      </Switch>
-        </div>
-        </main>
-    <footer className="footer">
-      <div>
-        &copy; thessiansound.com | Designed by Thessiah 
-        <div className="footer-bottom">
-        All rights reserved. </div>
-      </div>
-    </footer>
-  </div>
+        <Route path="/about" component={About} />
+        <Route path="/pricing" component={Pricing}/>
+    </Switch>
+    <Footer /> 
   </BrowserRouter>
+  </>
   ); 
 }
 

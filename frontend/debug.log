@@ -1016,3 +1016,17 @@
 [0907/004606.386:WARNING:pe_image_reader.cc(340)] could not read dos header from C:\WINDOWS\SYSTEM32\CRYPTBASE.DLL
 [0907/004606.387:ERROR:process_memory_win.cc(73)] ReadMemory at 0x7ffa5d3c0000 of 64 bytes failed: Only part of a ReadProcessMemory or WriteProcessMemory request was completed. (0x12B)
 [0907/004606.387:WARNING:pe_image_reader.cc(340)] could not read dos header from C:\WINDOWS\SYSTEM32\CRYPTBASE.DLL
+[1010/185015.764:ERROR:settings.cc(430)] Settings version is not 5
+[1010/190016.039:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\riche\AppData\Local\Microsoft\Edge\User Data\Crashpad\attachments\4743af20-f002-43bd-ab9c-419f634ac5a5: The system cannot find the path specified. (0x3)
+[1010/190016.098:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\riche\AppData\Local\Microsoft\Edge\User Data\Crashpad\attachments\620f4521-efe4-4ec7-8e1c-fb2f8d8eb958: The system cannot find the path specified. (0x3)
+[1010/190016.112:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\riche\AppData\Local\Microsoft\Edge\User Data\Crashpad\attachments\81ef2c5e-911a-429a-a49d-3d4f49b4b2ab: The system cannot find the path specified. (0x3)
+[1010/190016.114:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\riche\AppData\Local\Microsoft\Edge\User Data\Crashpad\attachments\abee7054-2526-46fa-a286-b9ccd257f5b6: The system cannot find the path specified. (0x3)
+[1010/190016.115:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\riche\AppData\Local\Microsoft\Edge\User Data\Crashpad\attachments\c0ba85d8-d116-41f9-8e77-8b30cee5bf67: The system cannot find the path specified. (0x3)
+[1010/190016.133:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\riche\AppData\Local\Microsoft\Edge\User Data\Crashpad\attachments\f39930c2-3234-4066-b342-050d6a9f6c61: The system cannot find the path specified. (0x3)
+[1010/190016.156:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\riche\AppData\Local\Microsoft\Edge\User Data\Crashpad\attachments\f9bbfee7-e2a9-4ff0-aa29-6b45b9680f79: The system cannot find the path specified. (0x3)
+[1010/190016.156:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[1011/003011.192:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[1012/110145.577:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[1015/214028.278:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[1016/230433.572:ERROR:settings.cc(425)] Settings magic is not 1129342067
+[1016/231433.735:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
