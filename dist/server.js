@@ -29,6 +29,12 @@ _mongoose.default.connect(mongodbUrl, {
 }).catch(error => console.log(error.reason));
 
 const app = (0, _express.default)();
+app.use(function (req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
 app.use(_bodyParser.default.json());
 app.use("/api/users", _userRoute.default); //app.use("/api/products", productRoute);
 
