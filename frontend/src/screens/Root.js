@@ -11,7 +11,6 @@ function Root() {
     <>
       <HeroSection />
       <Cards />
-      <Footer />
     </>
   );
 }

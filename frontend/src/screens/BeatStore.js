@@ -36,7 +36,7 @@ function BeatStore(props) {
 
     return <div>
         <div className="back-to-home">
-            <Link to="/">Home</Link>
+            <Link to="/beatstore">Back</Link>
         </div>
             {loading ? (
             <div>Loading...</div>
