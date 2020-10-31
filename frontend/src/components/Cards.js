@@ -10,7 +10,7 @@ function Cards() {
         <div className='cards__wrapper'>
           <ul className='cards__items'>
             <CardItem
-              src='icons-utilities/listing-platinum-red-sheen.jpg'
+              src='icons-utilities/premium-icon.png'
               text='High quality, professional beats for all contemporary genres.'
               label='Beat Store'
               path='/beatstore'
