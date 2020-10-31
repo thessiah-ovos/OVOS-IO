@@ -1,4 +1,4 @@
-import beat1 from '/audios/Davu_untagged_mp3.mp3';
+/*import beat1 from '/audios/Davu_untagged_mp3.mp3';
 import beat2 from '/audios/Jewry_untagged_mp3.mp3';
 import beat3 from '/audios/Made_it_untagged_mp3.mp3';
 import beat4 from '/audios/Nuisance_untagged_mp3.mp3';
@@ -25,4 +25,4 @@ export const songsArr = [
       "Pages",
       beat5
     ],
-  ];
+  ];*/
