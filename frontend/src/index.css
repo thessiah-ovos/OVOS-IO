@@ -114,7 +114,9 @@ a:hover{
   align-items: center;
   flex-wrap: wrap;
   min-height: 100vh;
+  margin-bottom: 35rem;
 }
+
 .products li {
   list-style-type: none;
   padding: 0;
@@ -123,6 +125,7 @@ a:hover{
   height: 15rem;
   border-bottom: .01rem #c0c0c0 solid;
 }
+
 .product{
   display: flex;
   flex-direction: column;
@@ -545,6 +548,28 @@ tbody > tr:nth-child(odd) {
   background-color: #c0c0c0;
 }
 
+.mains {
+  margin-bottom: 15rem;
+}
+
+@media only screen and (min-width: 1200px) {
+  .mains {
+    margin-bottom: 15rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .mains {
+    margin-bottom: 10rem;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .mains {
+    margin-bottom: 15rem;
+  }
+}
+
 @media screen and (max-width: 960px) {
 
   .pricing img {
@@ -554,5 +579,38 @@ tbody > tr:nth-child(odd) {
     justify-content: center;
     max-width: 50rem;
     max-height: 50rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .products {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 100vh;
+    margin-bottom: 35rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .products {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 100vh;
+    margin-bottom: 30rem;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .products {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 100vh;
+    margin-bottom: 203rem;
   }
 }

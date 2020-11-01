@@ -14,6 +14,7 @@ import './input.css'
 function AudioPlayer() {
 
   return (
+    <div className="audioplayer">
     <PlayerState>
       <div className="mains">
         <div className="top">
@@ -29,6 +30,7 @@ function AudioPlayer() {
         <Controls />
       </div>
     </PlayerState>
+    </div>
   );
 }
 
