@@ -15,7 +15,7 @@ function HeroSection() {
           buttonStyle='btn--outline'
           buttonSize='btn--large'
         >
-          VISIT STORE
+          CREATE ACCOUNT
         </Button>
       </div>
     </div>

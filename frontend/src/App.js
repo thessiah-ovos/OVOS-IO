@@ -14,7 +14,6 @@ import OrderScreen from './screens/OrderScreen';
 import ProfileScreen from './screens/ProfileScreen';
 import OrdersScreen from './screens/OrdersScreen';
 import Home from './screens/Home';
-import AudioPlayer from './AudioPlayer';
 import Welcome from './screens/Welcome';
 import Services from './screens/Services';
 import ContactUs from './screens/ContactUs';
@@ -48,7 +47,6 @@ function App() {
         <Route path="/contact" component={ContactUs} />
         <Route path="/profile" component={ProfileScreen} />
         <Route path="/register" component={RegisterScreen} />
-        <Route path="/audioplayer" component={AudioPlayer} />
         <Route path="/terms" component={TermsScreen} />
         <Route path="/products" component={ProductsScreen} />
         <Route path="/order/:id" component={OrderScreen} />

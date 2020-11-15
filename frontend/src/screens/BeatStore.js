@@ -54,7 +54,7 @@ function BeatStore(props) {
                         <h4>{product.name}</h4>
                     </li>
                     <li>
-                       <Link to="/audioplayer">Audio Sampler</Link>
+                    <Link onClick={()=> window.open(product.youtube, "_blank")}>Audio Sample</Link>
                     </li>
                 </ul>
              </div> 
